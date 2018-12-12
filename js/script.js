@@ -32,5 +32,27 @@ $( document ).ready(function() {
         console.log(computerChoice);
         $("#computerChoice").text(computerChoice);
     });
+    
+    if (userChoice === "rock" && computerChoice === "rock") {
+        $("#winner").text("Tie");
+    } else if (userChoice === "paper" && computerChoice === "rock") {
+        $("#winner").text("User wins!");
+    } else if (userChoice === "scissors" && computerChoice === "rock") {
+        $("#winner").text("Computer wins!");
+    } else if (userChoice === "rock" && computerChoice === "paper") {
+        $("#winner").text("Computer wins!");
+    } else if (userChoice === "paper" && computerChoice === "paper") {
+        $("#winner").text("Tie!");
+    } else if (userChoice === "scissors" && computerChoice === "paper") {
+        $("#winner").text("User wins!");
+    } else if (userChoice === "rock" && computerChoice === "scissors") {
+        $("#winner").text("User wins!");
+    } else if (userChoice === "paper" && computerChoice === "scissors") {
+        $("#winner").text("Computer wins!");
+    } else if (userChoice === "scissors" && computerChoice === "scissors") {
+        $("#winner").text("Tie!");
+    } 
+    
+    
 });
 
